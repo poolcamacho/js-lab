@@ -8,7 +8,7 @@ export function captureConsoleOutput() {
     const originalConsoleWarn = console.warn
     const originalConsoleInfo = console.info
 
-    const formatOutput = (...args: any[]): string => {
+    const formatOutput = (...args: unknown[]): string => {
         return args.map((arg) => (typeof arg === "object" ? JSON.stringify(arg, null, 2) : String(arg))).join(" ")
     }
 
