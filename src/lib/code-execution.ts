@@ -1,4 +1,4 @@
-export async function executeJavaScript(code: string): Promise<any> {
+export async function executeJavaScript(code: string): Promise<unknown> {
     try {
         const asyncFunction = new Function(`
       return (async () => {
